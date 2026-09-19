@@ -12,6 +12,6 @@ public class MessageConsumer
 	@RabbitListener(queues = "${rabbitMQ.name}")
     public void receivedMessage(String message)
     {
-        log.info("Received message <{}> ", message);
+        log.info("Received message from RabbitMQ <{}> ", message);
     }
 }

@@ -25,8 +25,8 @@ public class RabbitMQConfig {
     private String queueName;
 
     @Bean
-    public Queue configureQueue() {
-    	
+    public Queue configureQueue() 
+    {
     	Queue q= new Queue(queueName, true);   	
     	log.info("configureQueue() <{}>", q.getName());   	
     	return q;
@@ -34,8 +34,7 @@ public class RabbitMQConfig {
     
     @Bean 
     public DirectExchange configureExchange()
-    {
-    		
+    {    		
     	log.info("configureExchange() <{}>",exchangeName);
     	return ExchangeBuilder.directExchange(exchangeName)
                 .durable(true)
